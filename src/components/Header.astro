@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components';
+import SocialLink from './SocialLink.astro';
+---
+
+<header class="flex items-center justify-between">
+  <div class="flex-1 space-y-2">
+    <h1 class="text-2xl font-bold font-ibm">Michael Mkrtchyan</h1>
+
+    <p class="max-w-md text-pretty font-ibm-mono text-sm text-muted">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi
+      iure consequuntur eveniet.
+    </p>
+
+    <p class="max-w-md items-center text-xs font-ibm-mono text-muted">
+      <span class="inline-flex gap-x-1.5 items-center align-baseline">
+        <Icon name="globe" class="text-muted" />
+        Los Angeles, California</span
+      >
+    </p>
+
+    <div class="flex gap-x-1 pt-1 text-muted">
+      <SocialLink name="email" link="mailto:michaelmkrtch.dev@gmail.como" />
+      <SocialLink name="github" link="https://github.com/MichaelMkrtch"/>
+      <SocialLink name="linkedin" link="https://www.linkedin.com/in/michaelmkr/" />
+    </div>
+  </div>
+  <span class="flex shrink-0 rounded-xl size-28 bg-muted">Image </span>
+</header>
