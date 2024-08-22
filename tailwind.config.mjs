@@ -8,6 +8,8 @@ export default {
       colors: {
         muted: '#567',
         accent: '#333e48',
+        green: '#00C030',
+        red: '#FF153A',
       },
       fontFamily: {
         ibm: ['IBM\\ Plex\\ Sans', ...defaultTheme.fontFamily.sans],

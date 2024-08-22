@@ -1,0 +1,25 @@
+---
+const { title, link, description, isLive } = Astro.props;
+---
+
+<div class="border rounded-lg p-3">
+  <div class="space-y-1">
+    <h3 class="font-semibold tracking-tight text-lg">
+      <a
+        href={isLive && link}
+        target="_blank"
+        class={`inline-flex items-center gap-1.5 ${isLive && 'hover:underline'}`}
+      >
+        {title}
+        <span class={`size-1 rounded-full ${isLive ? 'bg-green' : 'bg-red'}`}
+        ></span>
+      </a>
+    </h3>
+    <p class="text-muted text-xs font-ibm-mono tracking-wide">{description}</p>
+  </div>
+  <div class="text-pretty font-mono flex mt-auto">
+    <div class="flex flex-wrap gap-1 mt-2">
+      <slot />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+---
+import Badge from './Badge.astro';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section class="flex flex-col gap-y-3">
+  <h2 class="text-xl font-bold">Projects</h2>
+  <div class="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2">
+    <ProjectCard
+      title="Lumière"
+      link="https://lumiere-film.vercel.app/"
+      description="Web app to track and review the movies and shows you watch"
+      isLive
+    >
+      <Badge size="xs" mode="light">Side Project</Badge>
+      <Badge size="xs" mode="light">TypeScript</Badge>
+      <Badge size="xs" mode="light">Next.js</Badge>
+      <Badge size="xs" mode="light">Supabase</Badge>
+      <Badge size="xs" mode="light">Lucia Auth</Badge>
+    </ProjectCard>
+    <ProjectCard
+      title="MichaelMk.tech"
+      link=""
+      description="Upcoming personal website and blog, built with Svelte"
+    >
+      <Badge size="xs" mode="light">Side Project</Badge>
+      <Badge size="xs" mode="light">TypeScript</Badge>
+      <Badge size="xs" mode="light">Svelte</Badge>
+      <Badge size="xs" mode="light">Cloudflare</Badge>
+    </ProjectCard>
+  </div>
+</section>

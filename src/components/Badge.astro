@@ -1,5 +1,9 @@
+---
+const { size = 'sm', mode = 'dark' } = Astro.props;
+---
+
 <div
-  class="bg-accent hover:cursor-default text-center text-sm rounded-md py-0.5 px-2 font-medium text-zinc-200"
+  class={`font-ibm-mono text-center rounded-md py-0.5 px-2 hover:cursor-default  ${size === 'sm' ? 'text-sm font-medium' : 'text-xs font-semibold tracking-wide'} ${mode === 'dark' ? 'bg-accent text-zinc-200' : 'bg-zinc-100 text-accent'}`}
 >
   <slot />
 </div>
