@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import SocialLink from './SocialLink.astro';
+import portrait from './portrait.webp';
 ---
 
 <header class="flex items-center justify-between gap-x-1">
@@ -37,5 +39,13 @@ import SocialLink from './SocialLink.astro';
       />
     </div>
   </div>
-  <span class="flex shrink-0 rounded-xl size-28 bg-muted">Image </span>
+  <span class="flex shrink-0 rounded-xl size-28 bg-muted">
+    <Image
+      src={portrait}
+      alt="Portrait of Michael Mkrtchyan."
+      width={1920}
+      height={1080}
+      class="rounded-xl h-full w-full object-cover aspect-square"
+    />
+  </span>
 </header>
